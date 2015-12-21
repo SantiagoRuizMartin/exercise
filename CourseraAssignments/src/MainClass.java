@@ -6,6 +6,7 @@ public class MainClass {
         WordPlay w = new WordPlay();
         System.out.println(w.isVowel('a'));
         System.out.println(w.isVowel('A'));
-        System.out.println(w.replaceVowels("Hello Word",'*'));
+        System.out.println(w.replaceVowels("Hello Word", '*'));
+        System.out.println(w.emphasize("dna ctgaaactga",'n'));
     }
 }

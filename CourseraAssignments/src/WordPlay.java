@@ -25,9 +25,11 @@ public class WordPlay {
     public String emphasize(String phrase, char ch){
         StringBuilder sb = new StringBuilder(phrase);
         for (int i=0;i<phrase.length();i++){
-
+            if(isVowel(phrase.charAt(i))){
+                sb.setCharAt(i,'*');
+            }
         }
-        return null;
+        return sb.toString();
     }
 }
 
