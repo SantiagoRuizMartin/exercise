@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.operations.Mod;
+
 /**
  * Created by SantiagoRuiz on 16/12/2015.
  */
@@ -25,11 +27,24 @@ public class WordPlay {
     public String emphasize(String phrase, char ch){
         StringBuilder sb = new StringBuilder(phrase);
         for (int i=0;i<phrase.length();i++){
-            if(isVowel(phrase.charAt(i))){
-                sb.setCharAt(i,'*');
+            if((Character.toLowerCase(phrase.charAt(i))==Character.toLowerCase(ch))){
+                if (isEven(i + 1)){
+                    sb.setCharAt(i,'+');
+                }else{
+                    sb.setCharAt(i,'*');
+                }
+
             }
         }
         return sb.toString();
+    }
+
+    private boolean isEven (int i) {
+        if(i%2==0){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
 

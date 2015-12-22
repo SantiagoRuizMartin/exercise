@@ -7,6 +7,6 @@ public class MainClass {
         System.out.println(w.isVowel('a'));
         System.out.println(w.isVowel('A'));
         System.out.println(w.replaceVowels("Hello Word", '*'));
-        System.out.println(w.emphasize("dna ctgaaactga",'n'));
+        System.out.println(w.emphasize("Mary Bella Abracadabra",'a'));
     }
 }
