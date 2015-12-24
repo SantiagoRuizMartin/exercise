@@ -28,7 +28,7 @@ public class WordPlay {
         StringBuilder sb = new StringBuilder(phrase);
         for (int i=0;i<phrase.length();i++){
             if((Character.toLowerCase(phrase.charAt(i))==Character.toLowerCase(ch))){
-                if (isEven(i + 1)){
+                if ((i+1)%2==0) {
                     sb.setCharAt(i,'+');
                 }else{
                     sb.setCharAt(i,'*');
@@ -37,14 +37,6 @@ public class WordPlay {
             }
         }
         return sb.toString();
-    }
-
-    private boolean isEven (int i) {
-        if(i%2==0){
-            return true;
-        }else{
-            return false;
-        }
     }
 }
 
