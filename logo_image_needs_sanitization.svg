@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" onload="alert('xss')" viewBox="0 0 10 10">
+  <script>alert('xss')</script>
+  <style>.bad { background: url("https://evil.example/x"); }</style>
+  <a href="javascript:alert('xss')">
+    <rect width="10" height="10" fill="#0a0" style="background-image:url('https://evil.example/x')" />
+  </a>
+</svg>
